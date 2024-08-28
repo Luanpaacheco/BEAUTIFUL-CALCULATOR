@@ -4,124 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <style>
-        *{
-            margin:0;
-            padding : 0;
-
-
-        }
-        .fundo{
-           background-color: #837ECE; 
-           height: 100vh;
-           color: black;
-           font-family:Arial, Helvetica, sans-serif;
-        }
-        .calculadora{
-           position: absolute;
-           background-color: #2D2A37 ; 
-           top:50%;
-           left: 50%;
-           transform: translate(-50%,-50%);
-           border-radius: 15px;
-           padding: 15px;
-
-        }
-        .botao{
-            background-color: #373440 ;
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            border-radius: 35px;
-            border-style: hidden;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0,0.3);
-            cursor: pointer;
-            color: #ffff;
-
-        }
-        .botaoRoxo{
-            background-color: #442773 ;
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            border-radius: 35px;
-            border-style: hidden;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0,0.3);
-            cursor: pointer;
-            color: #ffff;
-        }
-        .botaoLilas{
-            background-color: #7F4AD8 ;
-            width: 50px;
-            height: 50px;
-            font-size: 25px;
-            border-radius: 35px;
-            border-style: hidden;
-            box-shadow: 3px 3px 5px rgba(0, 0, 0,0.3);
-            cursor: pointer;
-            color: #ffff;
-        }
-        .botao:hover{
-            background-color: #2C2A36 ;
-        }
-        .botaoRoxo:hover{
-            background-color: darkorchid ;
-        }
-        .botaoLilas:hover{
-            background-color:darkorchid ;
-        }
-        #resultado{
-            background-color: #2D2A37;
-            width: 200;
-            height: 30;
-            margin: 5px;;
-            font-size: 25px;
-            color: white;
-            text-align: right;
-            padding: 5px;
-
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
         <div class="fundo">
             <h1>Calculadora do luan</h1>
             <div class="calculadora">
                 <h1></h1>
-                <p id="resultado">_</p>
+                <p class="resultado" id="resultado"></p>
                 <table>
                     <tr>
-                        <td><button class="botao">CE</button></td>
-                        <td><button class="botao">C</button></td>
-                        <td><button class="botao">%</button></td>
-                        <td><button class="botaoRoxo">/</button></td>
+                        <td><button onclick="colocar('CE')" class="botao">CE</button></td>
+                        <td><button onclick="apagar()"class="botao">C</button></td>
+                        <td><button onclick="colocar('%')"class="botao">%</button></td>
+                        <td><button onclick="colocar('/')"class="botaoRoxo">/</button></td>
                     </tr>
                     <tr>
-                        <td><button class="botao">7</button></td>
-                        <td><button class="botao">8</button></td>
-                        <td><button class="botao">9</button></td>
-                        <td><button class="botaoRoxo">*</button></td>
+                        <td><button onclick="numero(7,'7')" class="botao">7</button></td>
+                        <td><button onclick="numero(8,'8')"class="botao">8</button></td>
+                        <td><button onclick="colocar(9,'9')"class="botao">9</button></td>
+                        <td><button onclick="opera('*')"class="botaoRoxo">*</button></td>
                     </tr>
                     <tr>
-                        <td><button class="botao">4</button></td>
-                        <td><button class="botao">5</button></td>
-                        <td><button class="botao">6</button></td>
-                        <td><button class="botaoRoxo">-</button></td>
+                        <td><button onclick="colocar('4')"class="botao">4</button></td>
+                        <td><button onclick="colocar('5')"class="botao">5</button></td>
+                        <td><button onclick="colocar('6')"class="botao">6</button></td>
+                        <td><button onclick="colocar('-')"class="botaoRoxo">-</button></td>
                     </tr>
                     <tr>
-                        <td><button class="botao">1</button></td>
-                        <td><button class="botao">2</button></td>
-                        <td><button class="botao">3</button></td>
-                        <td><button class="botaoRoxo">+</button></td>
+                        <td><button onclick="colocar('1')"class="botao">1</button></td>
+                        <td><button onclick="colocar('2')"class="botao">2</button></td>
+                        <td><button onclick="colocar('3')"class="botao">3</button></td>
+                        <td><button onclick="opera('+')"class="botaoRoxo">+</button></td>
                     </tr>
                     <tr>
-                        <td><button class="botao">+/-</button></td>
-                        <td><button class="botao">0</button></td>
-                        <td><button class="botao">,</button></td>
-                        <td><button class="botaoLilas">=</button></td>
+                        <td><button onclick="colocar('/')"class="botao">+/-</button></td>
+                        <td><button onclick="colocar('0')"class="botao">0</button></td>
+                        <td><button onclick="colocar(',')"class="botao">,</button></td>
+                        <td><button onclick="mostrar()" class="botaoLilas">=</button></td>
                     </tr>
                 </table>
             </div>
         </div>
+        <script src="app.js" defer></script>
 </body>
 </html>

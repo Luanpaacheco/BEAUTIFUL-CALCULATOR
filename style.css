@@ -72,5 +72,20 @@
     color: white;
     text-align: right;
     padding: 5px;
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+#historico{
+    background-color: #2D2A37;
+    width: 170px;
+    height: 10px;
+    margin: 5px;;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.538);
+    text-align: right;
+    padding: 5px;
 
 }

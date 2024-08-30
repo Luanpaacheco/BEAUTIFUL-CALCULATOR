@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,36 +11,37 @@
             <h1>Calculadora do luan</h1>
             <div class="calculadora">
                 <h1></h1>
+                <p class="historico" id="historico"></p>
                 <p class="resultado" id="resultado"></p>
                 <table>
                     <tr>
-                        <td><button onclick="colocar('CE')" class="botao">CE</button></td>
-                        <td><button onclick="apagar()"class="botao">C</button></td>
-                        <td><button onclick="colocar('%')"class="botao">%</button></td>
-                        <td><button onclick="colocar('/')"class="botaoRoxo">/</button></td>
+                        <td><button onclick="apagarCE('CE')" class="botao">CE</button></td>
+                        <td><button onclick="apagarTudo()"class="botao">C</button></td>
+                        <td><button onclick="opera('%')"class="botao">%</button></td>
+                        <td><button onclick="opera('/')"class="botaoRoxo">/</button></td>
                     </tr>
                     <tr>
-                        <td><button onclick="numero(7,'7')" class="botao">7</button></td>
-                        <td><button onclick="numero(8,'8')"class="botao">8</button></td>
-                        <td><button onclick="colocar(9,'9')"class="botao">9</button></td>
+                        <td><button onclick="colocar(7)" class="botao">7</button></td>
+                        <td><button onclick="colocar(8)"class="botao">8</button></td>
+                        <td><button onclick="colocar(9)"class="botao">9</button></td>
                         <td><button onclick="opera('*')"class="botaoRoxo">*</button></td>
                     </tr>
                     <tr>
-                        <td><button onclick="colocar('4')"class="botao">4</button></td>
-                        <td><button onclick="colocar('5')"class="botao">5</button></td>
-                        <td><button onclick="colocar('6')"class="botao">6</button></td>
-                        <td><button onclick="colocar('-')"class="botaoRoxo">-</button></td>
+                        <td><button onclick="colocar(4)"class="botao">4</button></td>
+                        <td><button onclick="colocar(5)"class="botao">5</button></td>
+                        <td><button onclick="colocar(6)"class="botao">6</button></td>
+                        <td><button onclick="opera('-')"class="botaoRoxo">-</button></td>
                     </tr>
                     <tr>
-                        <td><button onclick="colocar('1')"class="botao">1</button></td>
-                        <td><button onclick="colocar('2')"class="botao">2</button></td>
-                        <td><button onclick="colocar('3')"class="botao">3</button></td>
+                        <td><button onclick="colocar(1)"class="botao">1</button></td>
+                        <td><button onclick="colocar(2)"class="botao">2</button></td>
+                        <td><button onclick="colocar(3)"class="botao">3</button></td>
                         <td><button onclick="opera('+')"class="botaoRoxo">+</button></td>
                     </tr>
                     <tr>
-                        <td><button onclick="colocar('/')"class="botao">+/-</button></td>
-                        <td><button onclick="colocar('0')"class="botao">0</button></td>
-                        <td><button onclick="colocar(',')"class="botao">,</button></td>
+                        <td><button onclick="colocar('+/-')"class="botao">+/-</button></td>
+                        <td><button onclick="colocar(0)"class="botao">0</button></td>
+                        <td><button onclick="colocar('.')"class="botao">,</button></td>
                         <td><button onclick="mostrar()" class="botaoLilas">=</button></td>
                     </tr>
                 </table>

@@ -57,6 +57,9 @@ function opera(operado){
             operador=operado;
             mostrar();
         }
+        if(operado=='@'){
+            document.getElementById("resultado").innerHTML=Number(document.getElementById("resultado").innerHTML)*(-1);
+        }
         primeira=false;
     }else {
         switch (operador) {
@@ -84,6 +87,9 @@ function opera(operado){
                     operador=operado;
                     mostrar();
                     break;
+            case '@':
+                Number(document.getElementById("resultado").innerHTML)=Number(document.getElementById("resultado").innerHTML)*(-1);
+                        break;
             default:
                 break;
         }

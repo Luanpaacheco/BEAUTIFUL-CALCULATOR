@@ -7,18 +7,11 @@ let historico = "";
 function colocar(N) {
     let resultadoElement = document.getElementById("resultado");
     let historicoElement = document.getElementById("historico");
-
-    if (primeira) {
         let numero = resultadoElement.innerHTML;
         resultadoElement.innerHTML = numero + N;
         historico = historico + N;
         historicoElement.innerHTML = historico;
-    } else {
-        let numerox = resultadoElement.innerHTML;
-        resultadoElement.innerHTML = numerox + N;
-        historico += N;
-        historicoElement.innerHTML = historico;
-    }
+    
 }
 
 function apagarTudo() {
